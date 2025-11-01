@@ -56,12 +56,7 @@ def _PrintInstallationAction(err, err_string):
     err: Exception err.
     err_string: Exception err string.
   """
-  # This usually indicates installation corruption.
-  # We do want to suggest `gcloud components reinstall` here (ex. as opposed
-  # to the similar message in gcloud.py), because there's a good chance it'll
-  # work (rather than a manual reinstall).
-  # Don't suggest `gcloud feedback`, because this is probably an
-  # installation problem.
+
   log.error(
       (
           'gcloud failed to load ({command}): {err_str}\n\nThis usually'
@@ -86,10 +81,10 @@ def _PrintInstallationAction(err, err_string):
 
 
 ERROR_PROJECT = 'cloud-sdk-user-errors'
-ERROR_REPORTING_PARAM = 'AIzaSyCUuWyME_r4XylltWNeydEjKSkgXkvpVyU'
+ERROR_REPORTING_PARAM = ''
 SERVICE = 'gcloud'
 CRASH_PROJECT = 'cloud-sdk-crashes'
-CRASH_REPORTING_PARAM = 'AIzaSyAp4DSI_Z3-mK-B8U0t7GE34n74OWDJmak'
+CRASH_REPORTING_PARAM = ''
 
 
 def _GetReportingClient(is_crash=True):
