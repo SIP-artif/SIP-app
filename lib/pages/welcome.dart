@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/log-in-pages/log_in_guardian.dart';
-import 'package:myapp/pages/sign-up-pages/sign_up_1.dart';
-import 'package:myapp/pages/sign-up-pages/guardian_sign_up1.dart';
-import 'package:myapp/pages/log-in-pages/log_in_patient.dart';
+import 'package:myapp/pages/login_pages/guardian_login.dart';
+import 'package:myapp/pages/sign-up-pages/patient_sign_up_1.dart';
+import 'package:myapp/pages/sign-up-pages/guardian_sign_up.dart';
+import 'package:myapp/pages/login_pages/patient_login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -12,6 +12,7 @@ const WelcomePage({super.key});
 @override
 Widget build(BuildContext context) {
  return Scaffold(
+  backgroundColor: const Color(0xFFF4F7FC),
    body: Center(
      child: Column(
        mainAxisAlignment: MainAxisAlignment.center,
@@ -104,7 +105,7 @@ Widget _buildSignUpCard({
           } else {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => GuardianAccountPage()),
+              MaterialPageRoute(builder: (context) => GuardianSignupPage()),
               );
           }
          },
